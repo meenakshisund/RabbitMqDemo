@@ -69,6 +69,16 @@ RabbitTemplate rabbitTemplate(){
     }
 ```
 
+**application.properties : **
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=guest
+spring.rabbitmq.password=guest
+
+rabbitmq.queue=first.queue
+rabbitmq.exchange=first.direct
+rabbitmq.routingKey=first.routingkey
+
 Controller:
 
 Call the send(msg) method in Producer to ingest data into the exchange with routingKey.
